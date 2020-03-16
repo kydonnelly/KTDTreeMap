@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5'
   
   s.subspec 'core' do |c|
-      c.source_files = 'KTDTreeMap/Classes/**/*.{swift}'
+      c.source_files = 'Pod/Classes/**/*.{swift}'
   end
 
   s.requires_arc = true

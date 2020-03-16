@@ -1,0 +1,24 @@
+{
+  "name": "KTDTreeMap",
+  "version": "0.0.1",
+  "summary": "TreeMap display in CollectionView for iOS.",
+  "description": "KTDTreeMap is an easy to use library for showing tree maps in an iOS UICollectionView. Tree Maps are a way to visualize related information in a way that maximizes space usage. Traditional pie charts or binary trees have lots of whitespace; tree maps fill their entire area.",
+  "homepage": "https://github.com/kydonnelly/KTDTreeMap",
+  "license": {
+    "type": "MPLv2.0",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Kyle Donnelly": "kydonnelly@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/kydonnelly/KTDTreeMap.git",
+    "tag": "0.0.1"
+  },
+  "swift_versions": "5",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Pod/Classes/**/*.{swift}",
+  "swift_version": "5"
+}
