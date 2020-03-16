@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2710DD1A241F158C00365E87 /* KTDTreeMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2710DD10241F158C00365E87 /* KTDTreeMap.framework */; };
-		2710DD1F241F158C00365E87 /* KTDTreeMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD1E241F158C00365E87 /* KTDTreeMapTests.swift */; };
 		2710DD3F241F185900365E87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD3E241F185900365E87 /* AppDelegate.swift */; };
 		2710DD41241F185900365E87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD40241F185900365E87 /* SceneDelegate.swift */; };
 		2710DD43241F185900365E87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD42241F185900365E87 /* ViewController.swift */; };
@@ -19,27 +17,13 @@
 		2710DD54241F1C2F00365E87 /* TreeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD53241F1C2F00365E87 /* TreeMapViewController.swift */; };
 		2710DD56241F1C4200365E87 /* TreeMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710DD55241F1C4200365E87 /* TreeMap.storyboard */; };
 		2710DD58241F1C8B00365E87 /* TreeMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710DD57241F1C8B00365E87 /* TreeMapCell.swift */; };
-		9948A6398856C7AB0F61955D /* libPods-KTDTreeMapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10B5809CEF429C9086D789A6 /* libPods-KTDTreeMapTests.a */; };
 		9DE1D11721772F308E03557A /* libPods-TreeMapDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB8097F208A165FCC715038 /* libPods-TreeMapDemo.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2710DD1B241F158C00365E87 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2710DD07241F158C00365E87 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2710DD0F241F158C00365E87;
-			remoteInfo = KTDTreeMap;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		10B5809CEF429C9086D789A6 /* libPods-KTDTreeMapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KTDTreeMapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1DA716E79975DA8F100154 /* Pods-TreeMapDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreeMapDemo.debug.xcconfig"; path = "Target Support Files/Pods-TreeMapDemo/Pods-TreeMapDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		2710DD10241F158C00365E87 /* KTDTreeMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTDTreeMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2710DD19241F158C00365E87 /* KTDTreeMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTDTreeMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2710DD1E241F158C00365E87 /* KTDTreeMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTDTreeMapTests.swift; sourceTree = "<group>"; };
-		2710DD20241F158C00365E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2710DD3C241F185900365E87 /* TreeMapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeMapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2710DD3E241F185900365E87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2710DD40241F185900365E87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,15 +50,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2710DD16241F158C00365E87 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2710DD1A241F158C00365E87 /* KTDTreeMap.framework in Frameworks */,
-				9948A6398856C7AB0F61955D /* libPods-KTDTreeMapTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2710DD39241F185900365E87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				2710DD50241F192500365E87 /* Blank.swift */,
-				2710DD1D241F158C00365E87 /* KTDTreeMapTests */,
 				2710DD3D241F185900365E87 /* TreeMapDemo */,
 				2710DD11241F158C00365E87 /* Products */,
 				F5E3C501BA8E4E5A0581CF90 /* Pods */,
@@ -102,19 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				2710DD10241F158C00365E87 /* KTDTreeMap.framework */,
-				2710DD19241F158C00365E87 /* KTDTreeMapTests.xctest */,
 				2710DD3C241F185900365E87 /* TreeMapDemo.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		2710DD1D241F158C00365E87 /* KTDTreeMapTests */ = {
-			isa = PBXGroup;
-			children = (
-				2710DD1E241F158C00365E87 /* KTDTreeMapTests.swift */,
-				2710DD20241F158C00365E87 /* Info.plist */,
-			);
-			path = KTDTreeMapTests;
 			sourceTree = "<group>";
 		};
 		2710DD3D241F185900365E87 /* TreeMapDemo */ = {
@@ -185,25 +149,6 @@
 			productReference = 2710DD10241F158C00365E87 /* KTDTreeMap.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2710DD18241F158C00365E87 /* KTDTreeMapTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2710DD27241F158C00365E87 /* Build configuration list for PBXNativeTarget "KTDTreeMapTests" */;
-			buildPhases = (
-				39627467DBDFE1483F11CC6D /* [CP] Check Pods Manifest.lock */,
-				2710DD15241F158C00365E87 /* Sources */,
-				2710DD16241F158C00365E87 /* Frameworks */,
-				2710DD17241F158C00365E87 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2710DD1C241F158C00365E87 /* PBXTargetDependency */,
-			);
-			name = KTDTreeMapTests;
-			productName = KTDTreeMapTests;
-			productReference = 2710DD19241F158C00365E87 /* KTDTreeMapTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		2710DD3B241F185900365E87 /* TreeMapDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2710DD4F241F185A00365E87 /* Build configuration list for PBXNativeTarget "TreeMapDemo" */;
@@ -236,9 +181,6 @@
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
 					};
-					2710DD18241F158C00365E87 = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
 					2710DD3B241F185900365E87 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -258,7 +200,6 @@
 			projectRoot = "";
 			targets = (
 				2710DD0F241F158C00365E87 /* KTDTreeMap */,
-				2710DD18241F158C00365E87 /* KTDTreeMapTests */,
 				2710DD3B241F185900365E87 /* TreeMapDemo */,
 			);
 		};
@@ -266,13 +207,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		2710DD0E241F158C00365E87 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2710DD17241F158C00365E87 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,28 +227,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		39627467DBDFE1483F11CC6D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KTDTreeMapTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C37888E92559D284781763AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,14 +260,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2710DD15241F158C00365E87 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2710DD1F241F158C00365E87 /* KTDTreeMapTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2710DD38241F185900365E87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,14 +273,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2710DD1C241F158C00365E87 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2710DD0F241F158C00365E87 /* KTDTreeMap */;
-			targetProxy = 2710DD1B241F158C00365E87 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2710DD44241F185900365E87 /* Main.storyboard */ = {
@@ -567,44 +463,6 @@
 			};
 			name = Release;
 		};
-		2710DD28241F158C00365E87 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E9D7ECBF4E379B44FDA746D /* Pods-KTDTreeMapTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KTDTreeMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cooperative4thecommunity.KTDTreeMapTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2710DD29241F158C00365E87 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC16D16E255FA5ED3804D714 /* Pods-KTDTreeMapTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KTDTreeMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cooperative4thecommunity.KTDTreeMapTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		2710DD4D241F185A00365E87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E1DA716E79975DA8F100154 /* Pods-TreeMapDemo.debug.xcconfig */;
@@ -658,15 +516,6 @@
 			buildConfigurations = (
 				2710DD25241F158C00365E87 /* Debug */,
 				2710DD26241F158C00365E87 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2710DD27241F158C00365E87 /* Build configuration list for PBXNativeTarget "KTDTreeMapTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2710DD28241F158C00365E87 /* Debug */,
-				2710DD29241F158C00365E87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

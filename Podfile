@@ -8,10 +8,6 @@ def pods
 end
 
 target 'TreeMapDemo' do
-    pods
-end
-
-target 'KTDTreeMapTests' do
-    pods
+    pod 'KTDTreeMap', :testspecs => ['Tests'], :path => '.'
 end
 

@@ -38,7 +38,7 @@ internal class SquareTreeMapLayoutGenerator : TreeMapLayoutGenerator {
         return unsorted
     }
     
-    private func squarify(areas: [CGFloat], areasInRow: [CGFloat], bounds: CGRect) -> [CGRect] {
+    func squarify(areas: [CGFloat], areasInRow: [CGFloat], bounds: CGRect) -> [CGRect] {
         var minDimension: CGFloat
         var isWidth: Bool
         if bounds.size.width < bounds.size.height {
@@ -84,8 +84,12 @@ internal class SquareTreeMapLayoutGenerator : TreeMapLayoutGenerator {
         }
     }
     
-    private func worstRatio(areas: [CGFloat], dimension: CGFloat) -> CGFloat {
+    func worstRatio(areas: [CGFloat], dimension: CGFloat) -> CGFloat {
         guard let maxArea = areas.max(), let minArea = areas.min() else {
+            return CGFloat.infinity
+        }
+        
+        guard dimension > 0.0 else {
             return CGFloat.infinity
         }
         
@@ -97,21 +101,21 @@ internal class SquareTreeMapLayoutGenerator : TreeMapLayoutGenerator {
                    sumAreasSquared / (dimensionSquared * minArea))
     }
     
-    private func finalizeDimension(areas: [CGFloat], dimension: CGFloat, isWidth: Bool) -> CGSize {
+    func finalizeDimension(areas: [CGFloat], dimension: CGFloat, isWidth: Bool) -> CGSize {
         let totalArea = areas.reduce(0, +)
         let otherDimension = totalArea / dimension
         
         return isWidth ? CGSize(width: dimension, height: otherDimension) : CGSize(width: otherDimension, height: dimension)
     }
     
-    private func finalizeSizes(areas: [CGFloat], dimension: CGFloat, isWidth: Bool) -> [CGSize] {
+    func finalizeSizes(areas: [CGFloat], dimension: CGFloat, isWidth: Bool) -> [CGSize] {
         let totalRect = finalizeDimension(areas: areas, dimension: dimension, isWidth: isWidth)
         let totalArea = totalRect.width * totalRect.height
         
         return areas.map { isWidth ? CGSize(width: totalRect.width * $0 / totalArea, height: totalRect.height) : CGSize(width: totalRect.width, height: totalRect.height * $0 / totalArea) }
     }
     
-    private func finalizeFrames(sizes: [CGSize], bounds: CGRect, isWidth: Bool) -> [CGRect] {
+    func finalizeFrames(sizes: [CGSize], bounds: CGRect, isWidth: Bool) -> [CGRect] {
         var frames: [CGRect] = []
         
         if isWidth {

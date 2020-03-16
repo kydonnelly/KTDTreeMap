@@ -45,4 +45,8 @@ Pod::Spec.new do |s|
     #endif
   DESC
 
+  s.test_spec 'Tests' do |test_spec|
+    test_spec.source_files = 'KTDTreeMapTests/*.{swift}'
+  end
+
 end
