@@ -1,13 +1,10 @@
 platform :ios, '8.0'
 source 'https://github.com/kydonnelly/KTDTreeMap.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 use_modular_headers!
 
-def pods
-    pod 'KTDTreeMap', :path => '.'
-end
-
 target 'TreeMapDemo' do
-    pod 'KTDTreeMap', :testspecs => ['Tests'], :path => '.'
+    pod 'KTDTreeMap', :testspecs => ['Tests']
 end
 

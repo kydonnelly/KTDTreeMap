@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   }
 
   s.author       = { "Kyle Donnelly" => "kydonnelly@gmail.com" }
-  s.source         = { :git => "https://github.com/kydonnelly/KTDTreeMap.git", :branch => "master", :tag => "#{s.version}" }
+  s.source         = { :git => "https://github.com/kydonnelly/KTDTreeMap.git", :branch => "master", :tag => s.version }
 
   s.platform     = :ios, '8.0'
   s.ios.deployment_target = '8.0'
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5'
   
   s.subspec 'core' do |c|
-      c.source_files = 'KTDTreeMap/core/**/*.{swift}'
+      c.source_files = 'KTDTreeMap/Classes/**/*.{swift}'
   end
 
   s.requires_arc = true
