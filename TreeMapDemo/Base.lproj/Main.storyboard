@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="co9-TE-UAg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="yon-3G-ynj">
+            <objects>
+                <navigationController id="co9-TE-UAg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fjc-H5-Zde">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1wf-hu-ekE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ffe-9m-62l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-622" y="130"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TreeMapDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kI-cX-A4J">
+                                <rect key="frame" x="0.0" y="324.5" width="0.0" height="301.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="rcG-Oj-86b"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter comma-separated positive numbers to display in a tree map:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ah-h3-UnZ">
+                                <rect key="frame" x="32" y="324.5" width="350" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2, 8, 3.5, 19, 7.2, 7, 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Woc-c0-vZr">
+                                <rect key="frame" x="32" y="381.5" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display as:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-Vy-Px2">
+                                <rect key="frame" x="32" y="439.5" width="350" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mo-OU-Cua">
+                                <rect key="frame" x="32" y="476" width="350" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="Nqj-zt-u60"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wSV-nj-Dw6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0yu-7X-F8P"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eR4-fu-9uP">
+                                <rect key="frame" x="164.5" y="596" width="85" height="30"/>
+                                <state key="normal" title="Show Chart!"/>
+                                <connections>
+                                    <action selector="nextButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFH-um-OvJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Woc-c0-vZr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="4RM-Jx-M4T"/>
+                            <constraint firstItem="6Mo-OU-Cua" firstAttribute="top" secondItem="Ocu-Vy-Px2" secondAttribute="bottom" constant="16" id="6Rh-wU-tg7"/>
+                            <constraint firstItem="3Ah-h3-UnZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Abp-lF-Be5"/>
+                            <constraint firstItem="6kI-cX-A4J" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="EFA-dr-JEO"/>
+                            <constraint firstItem="6kI-cX-A4J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FOA-iU-l8W"/>
+                            <constraint firstItem="3Ah-h3-UnZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HeK-Ai-C6y"/>
+                            <constraint firstItem="Ocu-Vy-Px2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="J1w-dZ-bVA"/>
+                            <constraint firstItem="6Mo-OU-Cua" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="K08-Tz-3el"/>
+                            <constraint firstItem="6Mo-OU-Cua" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VSG-I6-ges"/>
+                            <constraint firstItem="Ocu-Vy-Px2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ygy-T2-3dK"/>
+                            <constraint firstItem="Ocu-Vy-Px2" firstAttribute="top" secondItem="Woc-c0-vZr" secondAttribute="bottom" constant="24" id="bO9-Dl-fbc"/>
+                            <constraint firstItem="eR4-fu-9uP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bnd-lZ-A3h"/>
+                            <constraint firstItem="Woc-c0-vZr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cTs-Z3-Qju"/>
+                            <constraint firstItem="6kI-cX-A4J" firstAttribute="bottom" secondItem="eR4-fu-9uP" secondAttribute="bottom" id="ftp-2i-r7e"/>
+                            <constraint firstItem="eR4-fu-9uP" firstAttribute="top" secondItem="6Mo-OU-Cua" secondAttribute="bottom" constant="24" id="fyf-B8-OtM"/>
+                            <constraint firstItem="Woc-c0-vZr" firstAttribute="top" secondItem="3Ah-h3-UnZ" secondAttribute="bottom" constant="16" id="i1z-gL-I63"/>
+                            <constraint firstItem="6kI-cX-A4J" firstAttribute="top" secondItem="3Ah-h3-UnZ" secondAttribute="top" id="iTT-MR-oca"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IWg-4U-viX"/>
+                    <connections>
+                        <outlet property="inputField" destination="Woc-c0-vZr" id="4Wn-g1-5kS"/>
+                        <outlet property="pickerView" destination="6Mo-OU-Cua" id="f0c-oM-xwb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="130"/>
+        </scene>
+    </scenes>
+</document>
