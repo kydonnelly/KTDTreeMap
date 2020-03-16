@@ -8,6 +8,7 @@ TREE_MAP_XCCONFIG = {
 	'SWIFT_TREAT_WARNINGS_AS_ERRORS' => 'YES',
 
 	'DEFINES_MODULE' => 'YES',
+	'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'YES',
 
 	'OTHER_CFLAGS' => '-Wall -Wextra -Wno-unused-parameter',
 }
@@ -25,8 +26,8 @@ Pod::Spec.new do |s|
   s.author       = { "Kyle Donnelly" => "kydonnelly@gmail.com" }
   s.source         = { :git => "https://github.com/kydonnelly/KTDTreeMap.git", :branch => "master", :tag => s.version }
 
-  s.platform     = :ios, '8.0'
-  s.ios.deployment_target = '8.0'
+  s.platform     = :ios, '9.0'
+  s.ios.deployment_target = '9.0'
 
   s.pod_target_xcconfig = TREE_MAP_XCCONFIG
   
@@ -34,7 +35,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5'
   
   s.subspec 'core' do |c|
-      c.source_files = 'Pod/Classes/**/*.{swift}'
+      c.source_files = 'KTDTreeMap/Classes/**/*.{swift}'
   end
 
   s.requires_arc = true
@@ -42,6 +43,7 @@ Pod::Spec.new do |s|
   s.prefix_header_contents = <<-DESC
     #ifdef __OBJC__
       #import <Foundation/Foundation.h>
+      #import <UIKit/UIKit.h>
     #endif
   DESC
 
