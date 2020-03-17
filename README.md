@@ -31,6 +31,12 @@ Some tree maps allow zooming to view detailed breakdowns within a part at a more
 
 Add a UICollectionView to your storyboard. Change its class to TreeMapCollectionView. Connect the dataSource and delegate IBOutlets as usual. The delegate must implement TreeMapCollectionViewDataSource in addition to UICollectionViewDataSource.
 
+![Interface Builder Demo](https://cooperative4thecommunity.com/wp-content/uploads/2020/03/TreeMapInterfaceBuilder.png)
+
+![Implementation Demo](https://cooperative4thecommunity.com/wp-content/uploads/2020/03/TreeMapDefinition.png)
+
+![Square Tree Map Example](https://cooperative4thecommunity.com/wp-content/uploads/2020/03/TreeMapSquare.png)
+
 ## Running unit tests
 
 After installing the pod and opening the xcworkspace, go to Manage Schemes and select KTDTreeMap-Unit-Tests. Close the Manage Schemes screen, select the unit test target, and Cmd+U to run test cases.
