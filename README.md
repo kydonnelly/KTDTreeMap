@@ -16,10 +16,12 @@ iOS ≥ 9.0
 
 Add the following to your Podfile:
 
+```ruby
 platform :ios, '9.0'
 source 'https://github.com/kydonnelly/specs.git'
 use_modular_headers!
 pod 'KTDTreeMap', :testspecs => ['Tests']
+```
 
 ## Use Cases
 
