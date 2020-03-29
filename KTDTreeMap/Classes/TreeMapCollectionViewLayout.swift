@@ -10,6 +10,7 @@ import Foundation
 internal class TreeMapCollectionViewLayout : UICollectionViewLayout {
     
     private var preparedAttributes: [UICollectionViewLayoutAttributes] = []
+    private var currentLayoutAttributes: [UICollectionViewLayoutAttributes] = []
     private var layoutGenerator: TreeMapLayoutGenerator = SquareTreeMapLayoutGenerator()
     
     private var treeMapCollectionView: TreeMapCollectionView? {
@@ -56,5 +57,26 @@ internal class TreeMapCollectionViewLayout : UICollectionViewLayout {
     
     override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         return self.preparedAttributes.filter { $0.frame.intersects(rect) }
+    }
+    
+    override func invalidateLayout() {
+        super.invalidateLayout()
+        self.currentLayoutAttributes = self.preparedAttributes
+    }
+    
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        return true
+    }
+    
+    override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        return self.currentLayoutAttributes[itemIndexPath.row]
+    }
+    
+    override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        guard itemIndexPath.row < self.preparedAttributes.count else {
+            return nil
+        }
+        
+        return self.preparedAttributes[itemIndexPath.row]
     }
 }
