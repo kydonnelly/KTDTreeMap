@@ -49,5 +49,8 @@ MPL v2, see file.
 
 ## Acknowledgements
 
-Inspiration from openbudgetoakland.org. Encouraged by Emily and Stephanie.
+Inspiration from openbudgetoakland.org.
+
+Encouraged by Emily and Stephanie.
+
 Square Tree Map algorithm based on https://www.win.tue.nl/~vanwijk/stm.pdf
