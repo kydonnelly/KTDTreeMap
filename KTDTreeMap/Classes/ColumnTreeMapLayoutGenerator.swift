@@ -10,7 +10,7 @@ import Foundation
 internal class ColumnTreeMapLayoutGenerator : TreeMapLayoutGenerator {
     
     func minWeightRatio(minSize: CGSize, fullSize: CGSize) -> CGFloat {
-        guard fullSize.width > 0.0 else {
+        guard fullSize.width > minSize.width else {
             return 0.0
         }
         

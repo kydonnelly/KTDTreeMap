@@ -10,11 +10,11 @@ import Foundation
 internal class RowTreeMapLayoutGenerator : TreeMapLayoutGenerator {
     
     func minWeightRatio(minSize: CGSize, fullSize: CGSize) -> CGFloat {
-        guard fullSize.width > 0.0 else {
+        guard fullSize.height > minSize.height else {
             return 0.0
         }
         
-        return minSize.width / fullSize.width
+        return minSize.width / fullSize.height
     }
     
     func rects(weights: [CGFloat], bounds: CGRect, minSize: CGSize) -> [CGRect] {
