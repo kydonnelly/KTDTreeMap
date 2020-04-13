@@ -71,6 +71,10 @@ internal class TreeMapCollectionViewLayout : UICollectionViewLayout {
     }
     
     override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        guard itemIndexPath.row < self.preparedAttributes.count else {
+            return nil
+        }
+        
         return self.currentLayoutAttributes[itemIndexPath.row]
     }
     
