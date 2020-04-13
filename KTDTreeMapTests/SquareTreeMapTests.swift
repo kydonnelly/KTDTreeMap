@@ -28,7 +28,7 @@ class SquareTreeMapTests : XCTestCase {
         let bounds = CGRect(x: 0, y: 0, width: 630, height: 420)
         
         // Test
-        let rects = generator.rects(weights: weights, bounds: bounds)
+        let rects = generator.rects(weights: weights, bounds: bounds, minSize: .zero)
         
         // Verify
         let expectedOutput = [CGRect(x: 0, y: 0, width: 315, height: 210),
@@ -51,7 +51,7 @@ class SquareTreeMapTests : XCTestCase {
         let bounds = CGRect(x: 0, y: 0, width: 630, height: 420)
         
         // Test
-        let rects = generator.rects(weights: weights, bounds: bounds)
+        let rects = generator.rects(weights: weights, bounds: bounds, minSize: .zero)
         
         // Verify
         let expectedOutput = [CGRect(x: 567, y: 245, width: 63, height: 175),

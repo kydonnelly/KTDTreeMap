@@ -17,7 +17,7 @@ internal class RowTreeMapLayoutGenerator : TreeMapLayoutGenerator {
         return minSize.width / fullSize.width
     }
     
-    func rects(weights: [CGFloat], bounds: CGRect) -> [CGRect] {
+    func rects(weights: [CGFloat], bounds: CGRect, minSize: CGSize) -> [CGRect] {
         let sumWeights = weights.reduce(0, +)
         
         var y: CGFloat = 0.0

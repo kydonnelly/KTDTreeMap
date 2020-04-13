@@ -20,7 +20,7 @@ internal class SquareTreeMapLayoutGenerator : TreeMapLayoutGenerator {
         }
     }
     
-    func rects(weights: [CGFloat], bounds: CGRect) -> [CGRect] {
+    func rects(weights: [CGFloat], bounds: CGRect, minSize: CGSize) -> [CGRect] {
         // This layout looks best when stepping through weights highest-to-lowest.
         // Keep track of the original index to put back in order.
         let sorted = weights.enumerated().sorted { $0.element > $1.element }

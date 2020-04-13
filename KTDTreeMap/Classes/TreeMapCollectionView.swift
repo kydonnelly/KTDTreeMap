@@ -19,9 +19,23 @@ import UIKit
 @objc public class TreeMapCollectionView : UICollectionView {
     
     @objc public enum LayoutType: Int {
+        /// Arranges cells into rows stacked vertically. Also known as 'slicing'.
+        /// The delegate's minimumCellSize specifies minimum row height.
         case rows
+        
+        /// Arranges cells into columns lined horizontally. Also known as 'dicing'.
+        /// The delegate's minimumCellSize specifies minimum column width.
         case columns
+        
+        /// Arranges cells as rectangles with low aspect ratios.
+        /// Generally ordered largest-to-smallest from top-left to bottom-right.
+        /// The delegate's minimumCellSize specifies minimum cell area.
         case squares
+        
+        /// Arranges cells as rectangles with a minimum size.
+        /// Generally ordered smallest-to-largest in a clockwise spiral.
+        /// The delegate's minimumCellSize specifies the minimum cell size.
+        case spiral
     }
     
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {

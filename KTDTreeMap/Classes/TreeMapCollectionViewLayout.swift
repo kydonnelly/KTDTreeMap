@@ -25,6 +25,8 @@ internal class TreeMapCollectionViewLayout : UICollectionViewLayout {
             self.layoutGenerator = ColumnTreeMapLayoutGenerator()
         case .squares:
             self.layoutGenerator = SquareTreeMapLayoutGenerator()
+        case .spiral:
+            self.layoutGenerator = SpiralTreeMapLayoutGenerator()
         }
     }
     
@@ -46,7 +48,7 @@ internal class TreeMapCollectionViewLayout : UICollectionViewLayout {
         let weights = collectionView.currentWeights
         let minSize = collectionView.minCellSize
         
-        let rects = self.layoutGenerator.rects(weights: weights, bounds: collectionView.bounds, minSize: minSize)
+        let rects = self.layoutGenerator.layoutRects(weights: weights, bounds: collectionView.bounds, minSize: minSize)
         self.preparedAttributes = rects.enumerated().map {
             let indexPath = IndexPath(item: $0.offset, section: 0)
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)

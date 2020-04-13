@@ -9,18 +9,18 @@ import Foundation
 
 internal protocol TreeMapLayoutGenerator {
     
-    func rects(weights: [CGFloat], bounds: CGRect) -> [CGRect]
+    func rects(weights: [CGFloat], bounds: CGRect, minSize: CGSize) -> [CGRect]
     func minWeightRatio(minSize: CGSize, fullSize: CGSize) -> CGFloat
     
 }
 
 extension TreeMapLayoutGenerator {
     
-    func rects(weights: [CGFloat], bounds: CGRect, minSize: CGSize) -> [CGRect] {
+    func layoutRects(weights: [CGFloat], bounds: CGRect, minSize: CGSize) -> [CGRect] {
         let minRatio = self.minWeightRatio(minSize: minSize, fullSize: bounds.size)
         let adjustedWeights = self.adjustedWeights(weights, minRatio: minRatio)
         
-        return self.rects(weights: adjustedWeights, bounds: bounds)
+        return self.rects(weights: adjustedWeights, bounds: bounds, minSize: minSize)
     }
     
     // Adjusts raw weights with minimum individual:total weight ratio (≥ 0)

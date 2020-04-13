@@ -42,7 +42,7 @@ extension ViewController : UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        return 4
     }
     
 }
@@ -54,7 +54,7 @@ extension ViewController : UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let titles = ["Rows", "Columns", "Squares"]
+        let titles = ["Rows", "Columns", "Squares", "Spiral"]
         return titles[row]
     }
     
